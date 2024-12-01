@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Reactive Consumer
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: manual
+
+server:
+  port: 8088
+topic:
+  dlq: dlq-topic
